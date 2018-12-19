@@ -1,29 +1,68 @@
 package com.example.selester.dkdprototype;
-import android.content.Intent;
-import android.widget.Button;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class Activitya extends AppCompatActivity {
-    public Button button;
+
+public class Activitya extends Activity {
+    Button b1;
+    EditText ed1, ed2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
 
-        button=(Button) findViewById(R.id.loginbutton);
-        button.setOnClickListener(new View.OnClickListener() {
+        b1 = (Button) findViewById(R.id.loginbutton);
+        ed1 = (EditText) findViewById(R.id.editText1);
+        ed2 = (EditText) findViewById(R.id.editText2);
+        final EditText ed3 = (EditText) findViewById(R.id.editText3);
+
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivityb();
+                if (ed1.getText().toString().equals("admin") &&
+                        ed2.getText().toString().equals("admin")) {
+                    Toast.makeText(getApplicationContext(),
+                            "Succsess", Toast.LENGTH_SHORT).show();
+                    openActivityb();
+
+                }else if (ed3.getText().toString().equals("0000")) {
+                    openactivityc();
+                    Toast.makeText(getApplicationContext(),
+                            "Inside", Toast.LENGTH_SHORT).show();
+
+                }
+
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
-        });
+            });
+
+        }
+        public void openActivityb ()
+        {
+            Intent intent = new Intent(this, Activityb.class);
+            startActivity(intent);
+
+        }
+
+        public void openactivityc ()
+        {
+            Intent intent2 = new Intent(this, Activityc.class);
+            startActivity(intent2);
+        }
+
     }
-    public void openActivityb(){
-        Intent intent = new Intent(this,Activityb.class);
-        startActivity(intent);
-    }
-}
