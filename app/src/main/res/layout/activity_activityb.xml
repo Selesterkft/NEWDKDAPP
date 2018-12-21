@@ -4,9 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activityb"
-    tools:layout_editor_absoluteY="25dp">
+    tools:context=".Activityb">
 
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="74dp" />
 
     <TextView
         android:id="@+id/Munkák"
@@ -14,51 +20,45 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="10dp"
         android:background="@android:color/transparent"
         android:text="Munkák"
         android:textColor="#0071BC"
         android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@+id/line1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/line1"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+
         android:background="#0071BC"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.013" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/Munkák" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/guideline">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/backgroundbutton"
@@ -77,11 +77,10 @@
 
             <TextView
                 android:id="@+id/bigbox1"
-                android:layout_width="752dp"
+                android:layout_width="0dp"
                 android:layout_height="95dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/tilebox"
@@ -90,13 +89,15 @@
                 android:textColor="#0071BC"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/guideline" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/bigbox2"
-                android:layout_width="736dp"
+                android:layout_width="0dp"
                 android:layout_height="95dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/tilebox"
                 android:text="Trans-LTL Ltd.\n\nAlsónémedi     -     Sárvár\n3055       -       9600\nE Ip.t. 2351     -      Ipar u. 3."
                 android:textAlignment="center"
@@ -109,7 +110,7 @@
 
             <TextView
                 android:id="@+id/bigbox3"
-                android:layout_width="736dp"
+                android:layout_width="0dp"
                 android:layout_height="95dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/tilebox"
@@ -123,7 +124,7 @@
 
             <TextView
                 android:id="@+id/bigbox4"
-                android:layout_width="744dp"
+                android:layout_width="0dp"
                 android:layout_height="95dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/tilebox"
@@ -137,8 +138,9 @@
 
             <TextView
                 android:id="@+id/bigbox5"
-                android:layout_width="736dp"
+                android:layout_width="0dp"
                 android:layout_height="95dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/tilebox"
                 android:text="Transhungária Kft.\n\nBudapest     -     Baja\n1197     -     6500\nTelep u.8.     -      Szentjánosi u."
                 android:textAlignment="center"
@@ -151,8 +153,9 @@
 
             <TextView
                 android:id="@+id/bigbox6"
-                android:layout_width="752dp"
+                android:layout_width="0dp"
                 android:layout_height="95dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/tilebox"
                 android:text="Transhungária Kft.\n\nBudapest     -     Baja\n1197     -     6500\nTelep u.8.     -      Szentjánosi u."
                 android:textAlignment="center"
@@ -165,8 +168,9 @@
 
             <TextView
                 android:id="@+id/bigbox"
-                android:layout_width="752dp"
+                android:layout_width="0dp"
                 android:layout_height="95dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/tilebox"
                 android:text="Transhungária Kft.\n\nBudapest     -     Baja\n1197     -     6500\nTelep u.8.     -      Szentjánosi u."
                 android:textAlignment="center"
@@ -179,8 +183,9 @@
 
             <TextView
                 android:id="@+id/bigbox9"
-                android:layout_width="752dp"
-                android:layout_height="95dp"
+                android:layout_width="0dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/tilebox"
                 android:text="Transhungária Kft.\n\nBudapest     -     Baja\n1197     -     6500\nTelep u.8.     -      Szentjánosi u."
                 android:textAlignment="center"
@@ -220,12 +225,6 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/bigbox7" />
 
-            <android.support.constraint.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_begin="76dp" />
 
         </android.support.constraint.ConstraintLayout>
 
